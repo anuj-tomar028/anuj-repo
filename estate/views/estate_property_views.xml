@@ -27,6 +27,7 @@
             <header>
                 <button name="action_do_cancel" type="object" string="Cancel"/>
                 <button name="action_do_sold" type="object" string="Sold"/>
+                <field name="state" widget="statusbar" statusbar_visible="new,Offer Received,Offer Accepted,Sold"/>
             </header>
                 <sheet>
                     <h1 class="name_h">
