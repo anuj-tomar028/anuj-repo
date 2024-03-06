@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="stock_picking_batch.stock_picking_batch_action" model="ir.actions.act_window">
+        <field name="view_mode">tree,form,graph,kanban,gantt</field>
+    </record>
+
+    <record id="stock_batch_gantt_inherited" model="ir.ui.view">
+        <field name="name">stock.batch.gantt.inherited</field>
+        <field name="model">stock.picking.batch</field>
+        <field name="type">gantt</field>
+        <field name="arch" type="xml">
+           <gantt date_start="scheduled_date" date_stop="scheduled_date" default_group_by="vehicle_id" color="id" decoration-info="state=='done'" decoration-warning="state=='draft'">
+                <field name="state"/>
+           </gantt>
+        </field>
+    </record>
+</odoo>

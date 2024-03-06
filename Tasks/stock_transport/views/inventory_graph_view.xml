@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="stock_picking_batch.stock_picking_batch_action" model="ir.actions.act_window">
+        <field name="view_mode">tree,form,graph,kanban</field>
+    </record>
+
+    <record id="stock_batch_graph_inherited" model="ir.ui.view">
+        <field name="name">stock.batch.graph.inherited</field>
+        <field name="model">stock.picking.batch</field>
+        <field name="type">graph</field>
+        <field name="arch" type="xml">
+            <graph string="Batch Analysis" type="bar">
+                <field name="vehicle_category_id" type="column"/>
+                <field name="scheduled_date" type="row"/>
+                <field name="total_volume"/>
+                <field name="total_weight"/>
+            </graph>
+        </field>
+    </record>
+</odoo>
